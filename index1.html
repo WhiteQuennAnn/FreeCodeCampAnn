@@ -1,35 +1,24 @@
-<style>
-    .item1 {
-        background: LightSkyBlue;
-    }
+style>
+.item1{background:LightSkyBlue;}
+.item2{background:LightSalmon;}
+.item3{background:PaleTurquoise;}
+.item4{background:LightPink;}
+.item5{background:PaleGreen;}
 
-    .item2 {
-        background: LightSalmon;
-    }
+.container {
+font-size: 40px;
+min-height: 300px;
+width: 100%;
+background: LightGray;
+display: grid;
+/* Only change code below this line */
 
-    .item3 {
-        background: PaleTurquoise;
-    }
+grid-template-columns:repeat(3, 1fr);
 
-    .item4 {
-        background: LightPink;
-    }
-
-    .item5 {
-        background: PaleGreen;
-        grid-area: 3/1/4/4;
-    }
-
-    .container {
-        font-size: 40px;
-        min-height: 300px;
-        width: 100%;
-        background: LightGray;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-gap: 10px;
-    }
+/* Only change code above this line */
+grid-template-rows: 1fr 1fr 1fr;
+grid-gap: 10px;
+}
 </style>
 
 <div class="container">
