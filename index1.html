@@ -1,39 +1,63 @@
-<h1 id="title"> freeCodeCamp Survey Form </h1>
-<p id="description"> Thank you for taking the time to help us improve the platform </p>
-<form id="survey-form">
-    <p><input id="name" type="text" placeholder="Enter your name" required> Name </input> </p>
-    <p><input id="email" type="email" placeholder="email" required> Email  </input></p>
-    <p>
-        <input id="number" type="number" min="10" max="100" placeholder="number"> Age (optional)  </input></p>
+<header id="header"> Handcrafted, home-made masterpieces
+    <header>
+        <img id="header-img"
+             src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"/>
+        <nav id="nav-bar">
+            <a class="nav-link" href=#video>Features </a>
+            <a class="nav-link" href=#video> How It Works</a>
+            <a class="nav-link" href=#video>Pricing </a>
+        </nav>
+    </header>
 
-    <select id="dropdown">
-        <option>Пункт 1</option>
-        <option>Пункт 2</option>
-    </select>
-    </select>
-    <label id="name-label"> Enter your name</label>
+    <video id="video" src="https://youtu.be/y8Yv4pnO7qc"></video>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input id="email" placeholder="Enter your email address " type="email" name="email"> </input>
+        <input id="submit" type="submit"> </input>
 
-
-    <label type="radio" id="email-label">Enter your email </label>
-    <label type="radio" id="number-label"> Age</label>
-
-    <label for="Definitely">
-        Definitely</label>
-    <label for="Maybe"><input id="Maybe" type="radio" name="Maybe" value="Maybe" value="May" checked> Maybe</label>
-    <label for="Not sure"><input id="Not sure" type="radio" name="Not sure" value="Not sure" value="Not sure"> Not sure</label>
-
-    <input type="checkbox" value="Front-end Projects"> Open Source Community</input>
-    <input type="checkbox" value="Back-end Projects">Challenges </input>
-
-    <input type="submit" id="submit"> </input>
-    label for="Maybe"><input id="Maybe" type="radio" name="Maybe" value="Maybe" value="May" checked> Maybe</label>
-    <label for="Not sure"><input id="Not sure" type="radio" name="Not sure" value="Not sure" value="Not sure"> Not sure</label>
+    </form>
 
 
-    <textarea> Enter your comment here... </textarea>
+    <style>
+        #box-container {
+            display: flex;
+            height: 500px;
+        }
 
+        #box-1 {
+            background-color: dodgerblue;
+            height: 200px;
+            flex-grow: 1;
+        }
 
-</form>
+        #box-2 {
+            background-color: orangered;
+            height: 200px;
+            flex-grow: 2;
+        }
 
+        form {
+            font-size: 20px;
 
-<link rel="stylesheet" href="styles.css">
+        @media (max-font-size: 10px) {
+            /* CSS Rules */
+        }
+
+        ;
+        @media (max-height: 800px) {
+            /* CSS Rules */
+        }
+
+        }
+
+        /* Only change code below this line */
+        @media (max-height: 800px) {
+            p {
+                font-size: 10px;
+            }
+        }
+    </style>
+
+    <div id="box-container">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
+    </div>
