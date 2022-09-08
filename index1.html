@@ -1,21 +1,25 @@
-function switchOfStuff(val) {
-let answer = "";
-
+function sequentialSizes(val) {
+var answer = "";
+// Only change code below this line
 switch (val) {
-case "a":
-answer = "apple";
+case 1:
+case 2:
+case 3:
+return "Low";
 break;
-case "b":
-answer = "bird";
+case 4:
+case 5:
+case 6:
+return "Mid";
 break;
-case "c":
-answer = "cat";
+case 7:
+case 8:
+case 9:
+return "High";
 break;
-default:
-answer = "stuff";
 }
-
+// Only change code above this line
 return answer;
 }
-
-switchOfStuff(1);
+// Change this value to test
+sequentialSizes(1);
