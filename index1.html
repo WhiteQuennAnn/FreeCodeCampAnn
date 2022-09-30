@@ -1,31 +1,24 @@
-let users = {
+const users = {
 Alan: {
-age: 27,
-online: true
+online: false
 },
 Jeff: {
-age: 32,
 online: true
 },
 Sarah: {
-age: 48,
-online: true
-},
-Ryan: {
-age: 19,
-online: true
+online: false
 }
-};
+}
 
-function isEveryoneHere(userObj) {
-if (
-userObj.hasOwnProperty("Alan") &&
-userObj.hasOwnProperty("Jeff") &&
-userObj.hasOwnProperty("Sarah") &&
-userObj.hasOwnProperty("Ryan")
-) {
-return true;
+function countOnline(usersObj) {
+// Only change code below this line
+let result = 0;
+for (let user in usersObj) {
+if (usersObj[user].online === true) {
+result++;
 }
-return false;
 }
-console.log(isEveryoneHere(users));
+return result;
+// Only change code above this line
+}
+console.log(countOnline(users));
