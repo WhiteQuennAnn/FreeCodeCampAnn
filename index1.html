@@ -1,12 +1,14 @@
-function findLongestWordLength(str) {
-let words = str.split(' ');
-let maxLength = 0;
-
-for (let i = 0; i < words.length; i++) {
-if (words[i].length > maxLength) {
-maxLength = words[i].length;
+function largestOfFour(arr) {
+const results = [];
+for (let i = 0; i < arr.length; i++) {
+let largestNumber = arr[i][0];
+for (let j = 1; j < arr[i].length; j++) {
+if (arr[i][j] > largestNumber) {
+largestNumber = arr[i][j];
 }
 }
+results[i] = largestNumber;
+}
 
-return maxLength;
+return results;
 }
