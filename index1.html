@@ -1,6 +1,9 @@
-function confirmEnding(str, target) {
+function repeatStringNumTimes(str, num) {
+let accumulatedStr = "";
 
-return str.slice(str.length - target.length) === target;
+for (let i = 0; i < num; i++) {
+accumulatedStr += str;
 }
 
-confirmEnding("He has to give me a new name", "name");
+return accumulatedStr;
+}
