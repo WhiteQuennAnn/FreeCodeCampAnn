@@ -1,8 +1,9 @@
-function titleCase(str) {
-const newTitle = str.split(" ");
-const updatedTitle = [];
-for (let st in newTitle) {
-updatedTitle[st] = newTitle[st][0].toUpperCase() + newTitle[st].slice(1).toLowerCase();
+function frankenSplice(arr1, arr2, n) {
+// It's alive. It's alive!
+let newArray = arr2.slice();
+for (let i = 0; i < arr1.length; i++) {
+newArray.splice(n, 0, arr1[i]);
+n++;
 }
-return updatedTitle.join(" ");
+return newArray;
 }
