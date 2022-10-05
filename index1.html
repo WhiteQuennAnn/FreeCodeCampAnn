@@ -1,19 +1,12 @@
 function Dog(name) {
 this.name = name;
 }
-Dog.prototype.numLegs = 4;
-let beagle = new Dog("Snoopy");
-let ownProps = [];
-let prototypeProps = [];
 
 // Only change code below this line
-for (let property in beagle) {
-if(beagle.hasOwnProperty(property)) {
-ownProps.push(property);
+function joinDogFraternity(candidate) {
+if (candidate.constructor === Dog) {
+return true;
 } else {
-prototypeProps.push(property);
+return false;
 }
 }
-
-console.log(ownProps);
-console.log(prototypeProps);
