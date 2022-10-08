@@ -1,18 +1,10 @@
-// The global variable
-const s = [23, 65, 98, 5];
-
-Array.prototype.myFilter = function(callback) {
+function sliceArray(anim, beginSlice, endSlice) {
 // Only change code below this line
-const newArray = [];
-for (let i = 0; i < this.length; i++) {
-if (callback(this[i]) === true) {
-newArray.push(this[i]);
-}
-}
-// Only change code above this line
-return newArray;
-};
+const ter = inputAnim.slice(beginSlice, endSlice);
+return ter;
 
-const new_s = s.myFilter(function(item) {
-return item % 2 === 1;
-});
+// Only change code above this line
+}
+
+const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
