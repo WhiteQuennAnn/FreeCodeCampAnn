@@ -1,13 +1,7 @@
-function sumAll(arr) {
-const startNum = arr[0];
-const endNum = arr[1];
-
-const numCount = Math.abs(startNum - endNum) + 1;
-
-
-const sum = ((startNum + endNum) * numCount) / 2;
-return sum;
-
+function diffArray(arr1, arr2) {
+return arr1
+.concat(arr2)
+.filter(item => !arr1.includes(item) || !arr2.includes(item));
 }
 
-sumAll([1, 4]);
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
