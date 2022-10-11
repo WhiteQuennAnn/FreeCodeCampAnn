@@ -1,9 +1,13 @@
-function add(x, y, z) {
-return function(y) {
-return function(z) {
-return x + y + z;
-};
-};
+function sumAll(arr) {
+const startNum = arr[0];
+const endNum = arr[1];
+
+const numCount = Math.abs(startNum - endNum) + 1;
+
+
+const sum = ((startNum + endNum) * numCount) / 2;
+return sum;
+
 }
 
-add(10)(20)(30);
+sumAll([1, 4]);
