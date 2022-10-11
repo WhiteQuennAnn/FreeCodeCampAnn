@@ -1,10 +1,10 @@
+function checkPositive(arr) {
 // Only change code below this line
-function urlSlug(title) {
-return title.toLowerCase()
-.trim()
-.split(/\s+/)
-.join("-");
 
-}
+return arr.every(function(value) {
+return value > 0;
+});
 // Only change code above this line
-urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
+}
+
+checkPositive([1, 2, 3, -4, 5]);
