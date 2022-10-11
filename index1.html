@@ -1,12 +1,10 @@
-function whatIsInAName(collection, source) {
-const arr = [];
+function spinalCase(str) {
+str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
 
-const sourceKeys = Object.keys(source);
-
-return collection
-.filter(obj => sourceKeys
-.every(key => obj.hasOwnProperty(key) &&
-obj[key] === source[key]));
+return str
+.toLowerCase()
+.split(/(?:_| )+/)
+.join("-");
 }
 
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+spinalCase('This Is Spinal Tap');
