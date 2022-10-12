@@ -1,7 +1,11 @@
-function dropElements(arr, func) {
-let sliceIndex = arr.findIndex(func);
-return arr.slice(sliceIndex >= 0 ? sliceIndex : arr.length);
-
+function palindrome(str) {
+str = str.toLowerCase().replace(/[\W_]/g, '');
+for(var i = 0, len = str.length - 1; i < len/2; i++) {
+if(str[i] !== str[len-i]) {
+return false;
+}
+}
+return true;
 }
 
-dropElements([1, 2, 3], function(n) {return n < 3; });
+palindrome("eye");
