@@ -1,16 +1,11 @@
-function sumFibs(num) {
-let prevNumber = 0;
-let currNumber = 1;
-let result = 0;
-while (currNumber <= num) {
-if (currNumber % 2 !== 0) {
-result += currNumber;
+function sumPrimes(num) {
+// Check all numbers for primality
+let primes = [];
+for (let i = 2; i <= num; i++) {
+if (primes.every((prime) => i % prime !== 0))
+primes.push(i);
 }
-currNumber += prevNumber;
-prevNumber = currNumber - prevNumber;
+return primes.reduce((sum, prime) => sum + prime, 0);
 }
 
-return result;
-}
-
-sumFibs(4);
+sumPrimes(10);
