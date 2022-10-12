@@ -1,20 +1,13 @@
-function translatePigLatin(str) {
-var pigLatin = "";
-var regex = /[aeiou]/gi;
-
-if (str[0].match(regex)) {
-pigLatin = str + "way";
-} else if (str.match(regex) === null) {
-
-pigLatin = str + "ay";
+var index = str.indexOf(before);
+// Check to see if the first letter is uppercase or not
+if (str[index] === str[index].toUpperCase()) {
+// Change the after word to be capitalized before we use it.
+after = after.charAt(0).toUpperCase() + after.slice(1);
 } else {
-
-var vowelIndice = str.indexOf(str.match(regex)[0]);
-
-pigLatin = str.substr(vowelIndice) + str.substr(0, vowelIndice) + "ay";
+// Change the after word to be uncapitalized before we use it.
+after = after.charAt(0).toLowerCase() + after.slice(1);
 }
+// Now replace the original str with the edited one.
+str = str.replace(before, after);
 
-return pigLatin;
-}
-
-translatePigLatin("consonant");
+return str;
