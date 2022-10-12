@@ -1,25 +1,16 @@
-function pairElement(str) {
-let matchWithBasePair = function(char, pairedArray) {
-switch (char) {
-case "A":
-pairedArray.push(["A", "T"]);
-break;
-case "T":
-pairedArray.push(["T", "A"]);
-break;
-case "C":
-pairedArray.push(["C", "G"]);
-break;
-case "G":
-pairedArray.push(["G", "C"]);
-break;
-}
-}
-const paired = [];
+function fearNotLetter(str) {
 for (let i = 0; i < str.length; i++) {
-matchWithBasePair(str[i], paired);
+/* code of current character */
+const charCode = str.charCodeAt(i);
+
+/* if code of current character is not equal to first character + no of iteration
+then a letter was skipped */
+if (charCode !== str.charCodeAt(0) + i) {
+/* if current character skipped past a character find previous character and return */
+return String.fromCharCode(charCode - 1);
+}
+}
+return undefined;
 }
 
-return paired;
-}
-pairElement("GCG");
+fearNotLetter("abce");
