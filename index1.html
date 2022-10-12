@@ -1,10 +1,20 @@
-function spinalCase(str) {
-str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+function translatePigLatin(str) {
+var pigLatin = "";
+var regex = /[aeiou]/gi;
 
-return str
-.toLowerCase()
-.split(/(?:_| )+/)
-.join("-");
+if (str[0].match(regex)) {
+pigLatin = str + "way";
+} else if (str.match(regex) === null) {
+
+pigLatin = str + "ay";
+} else {
+
+var vowelIndice = str.indexOf(str.match(regex)[0]);
+
+pigLatin = str.substr(vowelIndice) + str.substr(0, vowelIndice) + "ay";
 }
 
-spinalCase('This Is Spinal Tap');
+return pigLatin;
+}
+
+translatePigLatin("consonant");
