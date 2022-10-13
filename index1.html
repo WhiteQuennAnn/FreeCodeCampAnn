@@ -1,30 +1,22 @@
-const Person = function(firstAndLast) {
-let fullName = firstAndLast;
+function orbitalPeriod(arr) {
+const GM = 398600.4418;
+const earthRadius = 6367.4447;
+const a = 2 * Math.PI;
+const newArr = [];
 
-this.getFirstName = function() {
-return fullName.split(" ")[0];
+const getOrbPeriod = function(obj) {
+const c = Math.pow(earthRadius + obj.avgAlt, 3);
+const b = Math.sqrt(c / GM);
+const orbPeriod = Math.round(a * b);
+// create new object
+return {name: obj.name, orbitalPeriod: orbPeriod};
 };
 
-this.getLastName = function() {
-return fullName.split(" ")[1];
-};
+for (let elem in arr) {
+newArr.push(getOrbPeriod(arr[elem]));
+}
 
-this.getFullName = function() {
-return fullName;
-};
+return newArr;
+}
 
-this.setFirstName = function(name) {
-fullName = name + " " + fullName.split(" ")[1];
-};
-
-this.setLastName = function(name) {
-fullName = fullName.split(" ")[0] + " " + name;
-};
-
-this.setFullName = function(name) {
-fullName = name;
-};
-};
-
-const bob = new Person("Bob Ross");
-console.log(bob.getFullName());
+orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
